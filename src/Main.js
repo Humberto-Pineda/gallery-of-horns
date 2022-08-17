@@ -11,6 +11,7 @@ class Main extends React.Component {
         <Beast
         title={beast.title}
         image_url={beast.image_url}
+        description={beast.description}
         key={idx}
         />
       )
