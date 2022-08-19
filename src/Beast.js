@@ -16,17 +16,25 @@ class Beast extends React.Component {
     });
   };
 
+  handleDetailedClick = () => {
+    this.props.temp(this.props.beast);
+  }
+
   render() {
-    // console.log(this.props.title);
-    // console.log(this.props.image_url);
-    // console.log(this.props.description);
     return (
       <Card className="beastie" style={{ width: '18rem' }}>
-        <Card.Title>{this.props.title}</Card.Title>
-        <Card.Img variant="top" src={this.props.image_url} alt={this.props.altImg} />
-        <Card.Text onClick={this.handleVotes}>❤️ {this.state.votes}  FAVS</Card.Text>
+        <Card.Title onClick={this.handleDetailedClick}>
+          {this.props.beast.title}
+        </Card.Title>
+        <Card.Img
+          variant="top"
+          src={this.props.beast.image_url}
+          alt={this.props.beast.altImg}
+          onClick={this.handleVotes}
+        />
+        <Card.Text >❤️ {this.state.votes}  FAVS</Card.Text>
         <Card.Text>⬆️ Add to favorites! ⬆️</Card.Text>
-        <Card.Text>{this.props.description}</Card.Text>
+        <Card.Text>{this.props.beast.description}</Card.Text>
       </Card>
     )
   }
