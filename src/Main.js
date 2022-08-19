@@ -1,25 +1,24 @@
 import React from "react";
 import Beast from './Beast';
-import data from './data.json';
 import './Main.css';
 
 class Main extends React.Component {
+
+  
+
   render() {
-    let hornedBeast = [];
-    data.forEach((beast, idx) => {
-      hornedBeast.push(
-        <Beast
-        title={beast.title}
-        image_url={beast.image_url}
-        description={beast.description}
+    let hornedBeast = this.props.data.map((beast, idx) => {
+      return <Beast
+        temp={this.props.temp}
+        beast={beast}
         key={idx}
-        />
-      )
+        handleShowModal={this.props.handleShowModal}
+      />
     });
 
     return (
       <main>
-       {hornedBeast}
+        {hornedBeast}
       </main>
     );
   }
