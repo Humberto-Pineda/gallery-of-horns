@@ -14,7 +14,7 @@ class SelectedBeast extends React.Component {
         >
           <Modal.Header closeButton>
           </Modal.Header>
-          <Card className="beastie" style={{ width: '18rem' }}>
+          <Card className="beastie3" style={{ width: '18rem' }}>
             <Card.Title>
               {this.props.beast.title}
             </Card.Title>
