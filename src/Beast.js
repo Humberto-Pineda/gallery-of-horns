@@ -23,7 +23,7 @@ class Beast extends React.Component {
   render() {
     return (
       <Card className="beastie" style={{ width: '18rem' }}>
-        <Card.Title onClick={this.handleDetailedClick}>
+        <Card.Title className="beastietitle" onClick={this.handleDetailedClick}>
           {this.props.beast.title}
         </Card.Title>
         <Card.Img
